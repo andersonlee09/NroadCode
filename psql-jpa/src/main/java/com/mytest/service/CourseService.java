@@ -9,6 +9,6 @@ import org.springframework.stereotype.Service;
  * @purpose null
  * @ModifiedRecords null
  */
-@Service
-public class CourseService {
+
+public interface CourseService {
 }

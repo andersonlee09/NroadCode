@@ -2,6 +2,7 @@ package com.mytest.dao;
 
 import com.mytest.domain.Student;
 import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.data.jpa.repository.JpaSpecificationExecutor;
 
 /**
  * @author andersonLee
@@ -11,7 +12,7 @@ import org.springframework.data.jpa.repository.JpaRepository;
  * @ModifiedRecords null
  */
 
-public interface StudentDao extends JpaRepository<Student, Integer> {
+public interface StudentDao extends JpaRepository<Student, Integer>, JpaSpecificationExecutor<Student> {
 
 
 }

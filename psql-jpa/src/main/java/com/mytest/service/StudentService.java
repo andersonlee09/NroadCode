@@ -1,6 +1,9 @@
 package com.mytest.service;
 
-import org.springframework.stereotype.Service;
+import com.fasterxml.jackson.core.JsonProcessingException;
+import com.mytest.domain.Student;
+
+import java.util.List;
 
 /**
  * @author andersonLee
@@ -9,6 +12,12 @@ import org.springframework.stereotype.Service;
  * @purpose null
  * @ModifiedRecords null
  */
-@Service
-public class StudentService {
+
+public interface StudentService {
+
+    Student queryOneStudentById(Integer id) throws JsonProcessingException;
+
+    boolean updateOneStudent(Student student);
+
+    List<Student> queryListStudent(Integer page, Integer limit);
 }
