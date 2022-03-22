@@ -1,11 +1,9 @@
 package com.hmdp.utils;
 
-import com.hmdp.entity.User;
 import org.springframework.web.servlet.HandlerInterceptor;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import javax.servlet.http.HttpSession;
 
 public class LoginInterceptor implements HandlerInterceptor {
 
@@ -20,14 +18,5 @@ public class LoginInterceptor implements HandlerInterceptor {
         }
         // 有用户，则放行
         return true;
-
-       /* HttpSession session = request.getSession();
-        Object user = session.getAttribute("user");
-        if (user != null) {
-            response.setStatus(401);
-            return false;
-        }
-        UserHolder.saveUser((User) user);
-        return true;*/
     }
 }

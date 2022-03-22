@@ -1,0 +1,30 @@
+spring:
+  security:
+    user:
+      name: admin
+      password: admin
+  redis:
+    #    host: 192.168.15.3 #127.0.0.1
+    host: 192.168.23.131
+    port: 6379
+    database: 0
+  #    password: ''
+
+  datasource:
+    #    url: jdbc:postgresql://192.168.15.3:5432/proxydial?useSSL=false
+    #    username: xldev
+    #    password: xinli@87669955
+    url: jdbc:postgresql://localhost:5432/proxydial?useSSL=false
+    username: postgres
+    password: 011009lrh
+
+  jpa:
+    database: postgresql
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+        temp:
+          use_jdbc_metadata_defaults: false
+    show-sql: true

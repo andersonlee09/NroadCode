@@ -9,6 +9,7 @@
         <option value="$PROJECT_DIR$/start/pom.xml" />
         <option value="$PROJECT_DIR$/redis/pom.xml" />
         <option value="$PROJECT_DIR$/springboot-redis/pom.xml" />
+        <option value="$PROJECT_DIR$/psql-jpa/pom.xml" />
       </list>
     </option>
   </component>

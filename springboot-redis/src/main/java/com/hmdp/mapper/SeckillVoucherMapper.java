@@ -2,7 +2,6 @@ package com.hmdp.mapper;
 
 import com.hmdp.entity.SeckillVoucher;
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
-import org.apache.ibatis.annotations.Mapper;
 
 /**
  * <p>
@@ -12,7 +11,6 @@ import org.apache.ibatis.annotations.Mapper;
  * @author 虎哥
  * @since 2022-01-04
  */
-@Mapper
 public interface SeckillVoucherMapper extends BaseMapper<SeckillVoucher> {
 
 }

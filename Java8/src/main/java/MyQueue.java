@@ -22,7 +22,7 @@ class MyQueue {
         judge();
         return stackTwo.pop();
     }
-    ArrayDeque
+
     public void judge() {
         if (stackTwo.isEmpty()) {
             while (!stackOne.isEmpty()) {

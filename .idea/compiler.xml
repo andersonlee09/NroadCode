@@ -7,17 +7,19 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="springboot-redis" />
+        <module name="Java8" />
+        <module name="psql-jpa" />
         <module name="start" />
         <module name="JPA" />
-        <module name="springboot-redis" />
         <module name="springboot-redis-proj" />
-        <module name="Java8" />
         <module name="redis" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel target="11">
       <module name="Java8" target="11" />
       <module name="JPA" target="11" />
+      <module name="psql-jpa" target="11" />
       <module name="redis" target="11" />
       <module name="springboot-redis" target="11" />
       <module name="springboot-redis-proj" target="11" />
@@ -26,6 +28,7 @@
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="psql-jpa" options="-parameters" />
       <module name="springboot-redis" options="-parameters" />
       <module name="springboot-redis-proj" options="-parameters" />
     </option>

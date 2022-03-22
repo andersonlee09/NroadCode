@@ -5,8 +5,6 @@ import org.springframework.web.bind.annotation.RequestMapping;
 
 import org.springframework.web.bind.annotation.RestController;
 
-import java.util.concurrent.ConcurrentHashMap;
-
 /**
  * <p>
  *  前端控制器
@@ -18,4 +16,5 @@ import java.util.concurrent.ConcurrentHashMap;
 @RestController
 @RequestMapping("/blog-comments")
 public class BlogCommentsController {
+
 }

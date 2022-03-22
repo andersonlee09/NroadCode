@@ -21,10 +21,11 @@ import org.springframework.stereotype.Service;
 import javax.annotation.PostConstruct;
 import javax.annotation.Resource;
 import java.time.Duration;
-import java.util.*;
+import java.util.Collections;
+import java.util.List;
+import java.util.Map;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
-import java.util.concurrent.ThreadPoolExecutor;
 
 /**
  * <p>
@@ -66,7 +67,7 @@ public class VoucherOrderServiceImpl extends ServiceImpl<VoucherOrderMapper, Vou
 
     private class VoucherOrderHandler implements Runnable {
 
-        /*@Override
+        @Override
         public void run() {
             while (true) {
                 try {
@@ -94,21 +95,17 @@ public class VoucherOrderServiceImpl extends ServiceImpl<VoucherOrderMapper, Vou
                     handlePendingList();
                 }
             }
-        }*/
+        }
 
         private void handlePendingList() {
             while (true) {
                 try {
-                    int[][] intervals = new int[1][1];
-
-
                     // 1.获取pending-list中的订单信息 XREADGROUP GROUP g1 c1 COUNT 1 BLOCK 2000 STREAMS s1 0
                     List<MapRecord<String, Object, Object>> list = stringRedisTemplate.opsForStream().read(
                             Consumer.from("g1", "c1"),
                             StreamReadOptions.empty().count(1),
                             StreamOffset.create("stream.orders", ReadOffset.from("0"))
                     );
-                    List<Integer> l = new ArrayList<>();
                     // 2.判断订单信息是否为空
                     if (list == null || list.isEmpty()) {
                         // 如果为null，说明没有异常消息，结束循环
@@ -126,11 +123,6 @@ public class VoucherOrderServiceImpl extends ServiceImpl<VoucherOrderMapper, Vou
                     log.error("处理订单异常", e);
                 }
             }
-        }
-
-        @Override
-        public void run() {
-            System.out.println("running...");
         }
     }
 
