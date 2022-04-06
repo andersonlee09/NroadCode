@@ -14,7 +14,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e3d267d5-d711-4cfb-a160-3203babdf448" name="默认的" comment="添加了redis的操作">
+      <change afterPath="$PROJECT_DIR$/ddd/src/main/java/com/test/application/repository/OrderRepository.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ddd/src/main/java/com/test/api/facade/impl/ProcessOrderServiceFacadeImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/ddd/src/main/java/com/test/api/facade/impl/ProcessOrderServiceFacadeImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ddd/src/main/java/com/test/api/facade/impl/read.txt" beforeDir="false" afterPath="$PROJECT_DIR$/ddd/README.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -30,6 +33,11 @@
     </option>
   </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="master" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="GithubPullRequestsUISettings">
@@ -388,7 +396,7 @@
       <workItem from="1649124569093" duration="5343000" />
       <workItem from="1649141523099" duration="6034000" />
       <workItem from="1649216834412" duration="6414000" />
-      <workItem from="1649225815516" duration="791000" />
+      <workItem from="1649225815516" duration="2717000" />
     </task>
     <task id="LOCAL-00001" summary="上传了namespace">
       <created>1647307767794</created>
@@ -476,10 +484,10 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="549" y="167" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1649217826932" />
-    <state x="605" y="313" key="Github.CreateGistDialog" timestamp="1647305868407">
+    <state x="605" y="313" key="Github.CreateGistDialog" timestamp="1649248596095">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="605" y="313" key="Github.CreateGistDialog/0.0.1536.824@0.0.1536.824" timestamp="1647305868407" />
+    <state x="605" y="313" key="Github.CreateGistDialog/0.0.1536.824@0.0.1536.824" timestamp="1649248596095" />
     <state width="1493" height="255" key="GridCell.Tab.0.bottom" timestamp="1649225791095">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -536,10 +544,10 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="249" y="0" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1649218415822" />
-    <state x="361" y="141" key="Vcs.Push.Dialog.v2" timestamp="1647940117775">
+    <state x="361" y="141" key="Vcs.Push.Dialog.v2" timestamp="1649249542939">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="361" y="141" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1647940117775" />
+    <state x="361" y="141" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1649249542939" />
     <state x="506" y="128" width="523" height="568" key="find.popup" timestamp="1646737227395">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
