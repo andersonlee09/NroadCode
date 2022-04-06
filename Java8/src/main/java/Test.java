@@ -1,7 +1,4 @@
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
-import java.util.Stack;
+import java.util.*;
 
 /**
  * @author andersonLee
@@ -12,56 +9,41 @@ import java.util.Stack;
  */
 public class Test {
     public static void main(String[] args) {
-        System.out.println(isPalindrome(121));
     }
 
-    public static boolean isPalindrome(int x) {
-        if (x < 0) return false;
-        int cur = 0;
-        while (x > 0) {
-            cur = cur * 10 + (x % 10);
-            x /= 10;
-        }
-        return cur == x;
-    }
-
-
-    public static boolean findNumberIn2DArray(int[][] matrix, int target) {
-        // 这道题给出两种思路
-        // 第一种：对每一行都进行二分查找,如果target大于第一个数或者小于最后一个数，那就退出
-        // 第二种：让初始位于左下角或者右上角，然后不断递进就可以了
-        if (matrix.length == 0 || matrix[0].length == 0) return false;
-        int x = matrix.length - 1, y = 0;
-        while (x > 0 && y < matrix[0].length) {
-            if (matrix[x][y] == target) {
-                return true;
-            } else if (matrix[x][y] > target) {
-                x--;
-            } else {
-                y++;
+    static public int[] getLeastNumbers(int[] arr, int k) {
+        // 最小的K个数字用大顶堆
+        int[] res = new int[k];
+        Queue<Integer> queue = new PriorityQueue<>(((o1, o2) -> o2- o1));
+        for (int e : arr) {
+            // 当前数字小于堆顶元素才会入堆
+            if (queue.isEmpty() || queue.size() < k || e < queue.peek()) {
+                queue.add(e);
+            }
+            if (queue.size() > k) {
+                queue.remove(); // 删除堆顶最大元素
             }
         }
-        return false;
+        int cnt = 0;
+        for (Integer integer : queue) {
+            res[cnt++] = integer;
+        }
+        return res;
     }
 
-    public static int nthUglyNumber(int n) {
-        int a = 0, b = 0, c = 0;
-        int[] dp = new int[n];
-        dp[0] = 1;
-        int cnt = 1;
-        while (cnt < n) {
-            int temp = Math.min(2 * dp[a], Math.min(3 * dp[b], 5 * dp[c]));
-            if (temp == 2 * dp[a]) {
-                a++;
-            } else if (temp == 3 * dp[b]) {
-                b++;
-            } else {
-                c++;
-            }
-            dp[cnt] = temp;
-            cnt++;
-        }
-        return dp[n-1];
+    static class TreeNode {
+        TreeNode left;
+        TreeNode right;
+        int val;
+    }
+
+    public void dfs(TreeNode node) {
+        if (node == null) return;
+        System.out.println(node.val);
+        dfs(node.left);
+        dfs(node.right);
     }
 
 }
+
+

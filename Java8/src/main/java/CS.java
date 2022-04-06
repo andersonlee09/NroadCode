@@ -1,5 +1,4 @@
-import java.util.ArrayList;
-import java.util.List;
+import java.util.*;
 
 /**
  * @author andersonLee
@@ -10,17 +9,20 @@ import java.util.List;
  */
 public class CS {
     public static void main(String[] args) {
-        int i = 0, cnt = 1;
-//        print(i, cnt);
-        List<Integer> list = new ArrayList<>();
-        list.add(1);
-        list.add(2);
-        System.out.println();
+        int i = 0;
+        int i1 = i++ + ++i;
+        System.out.println(i1);
+//        print(2, 2);
+
+
+
     }
 
 
     static void print(int i, int cnt) {
         System.out.println("i: " + i + " ================= cnt:" + cnt);
         print(i + 1, cnt * 2);
+
+
     }
 }

@@ -19,8 +19,9 @@ import javax.persistence.*;
 @JsonIgnoreProperties({"hibernateLazyInitializer", "handler"})
 public class SC {
     @Id
-    @Column(name = "id")
+//    @Column(name = "id")
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+//    @ManyToOne(fetch = FetchType.LAZY)
     @JsonProperty
     private Integer id;
 

@@ -28,5 +28,13 @@ spring:
         temp:
           use_jdbc_metadata_defaults: false
     show-sql: true
+
+  rabbitmq:
+    host: 192.168.8.108
+    #        host: 172.31.1.1
+    port: 5672
+    username: horus
+    password: s3cr3t
+    virtual-host: horus
 server:
   port: 8000

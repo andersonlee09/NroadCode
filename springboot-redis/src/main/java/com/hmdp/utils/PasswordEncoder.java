@@ -1,14 +1,20 @@
 package com.hmdp.utils;
 
 
+import cn.hutool.bloomfilter.BitMapBloomFilter;
+import cn.hutool.bloomfilter.bitMap.BitMap;
+import cn.hutool.bloomfilter.bitMap.IntMap;
 import cn.hutool.core.util.RandomUtil;
 import org.springframework.util.DigestUtils;
 
 import java.nio.charset.StandardCharsets;
+import java.util.HashMap;
 
 public class PasswordEncoder {
 
     public static String encode(String password) {
+
+        BitMap map = new IntMap();
         // 生成盐
         String salt = RandomUtil.randomString(20);
         // 加密
